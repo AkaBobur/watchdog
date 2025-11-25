@@ -199,7 +199,7 @@ monitor_all_processes = function()
         if file_content == null then file_content = ""
         
         watch_procs = file_content.split(char(10))
-        watch_procs = watch_procs[:-1]
+        //watch_procs = watch_procs[:-1] //uncomment it if you use new line in the end of list from watch_procs.txt
         
         // Additional safety check for empty array
         if not watch_procs then watch_procs = []
@@ -367,7 +367,7 @@ monitor_files_and_system = function()
     end if
     
     stored_files = config_file.get_content.split(char(10))
-    stored_files = stored_files[:-1]
+    // stored_files = stored_files[:-1] //uncomment it if you use new line in the end of list from watch_files.txt
     stored_map = {}
     for line in stored_files
         if line == "" then continue
@@ -475,4 +475,5 @@ main = function()
         wipe_sensitive_files()
     end while
 end function
+
 main()
