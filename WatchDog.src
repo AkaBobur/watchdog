@@ -1,4 +1,15 @@
-//Aka_B0B (https://github.com/AkaBobur/watchdog)
+//#######################################################
+// Aka_B0B (https://github.com/AkaBobur/watchdog)       #
+// Don't forget to credit the author if you use it.     #
+// It is a part of Super Script tool                    #
+// @Features:                                           #
+// Full system file indexing(file_sizes.cfg)            #
+// Autowipe sensitive files(passwd, Bank.txt, Mail.txt) #
+// Process monitoring                                   #
+// Custom Watch files+auto deletion(watch_files.txt)    #
+// Custom Watch process+auto kill(watch_procs.txt)      #
+// Monitor logging(monitor.log)                         #
+//#######################################################
 config_dir = "/root/watchdog_config"
 watch_files_path = "/root/watchdog_config/watch_files.txt"
 watch_procs_path = "/root/watchdog_config/watch_procs.txt"
@@ -477,3 +488,4 @@ main = function()
 end function
 
 main()
+
