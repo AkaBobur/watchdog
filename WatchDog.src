@@ -476,7 +476,7 @@ end function
 
 main = function()
     print("<color=white><b>:::Super Integrated System Monitoring Tool:::<b></color>")
-    print("<color=yellow>[i] Version :</color>" + "<color=red>" + version + "</color>")
+    print("<color=yellow>[i] By <color=orange>AkaB0B</color>, version: </color>" + "<color=red>" + version + "</color>")
     print("<color=orange>[*] Press Ctrl+C to stop monitoring</color>")
     init()
     log_message("<color=green>::: Monitoring started :::</color>")
@@ -490,5 +490,6 @@ main = function()
 end function
 
 main()
+
 
 
