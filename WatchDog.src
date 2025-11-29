@@ -10,6 +10,7 @@
 // Custom Watch process+auto kill(watch_procs.txt)      #
 // Monitor logging(monitor.log)                         #
 //#######################################################
+version = "1.4"
 config_dir = "/root/watchdog_config"
 watch_files_path = "/root/watchdog_config/watch_files.txt"
 watch_procs_path = "/root/watchdog_config/watch_procs.txt"
@@ -475,6 +476,7 @@ end function
 
 main = function()
     print("<color=white><b>:::Super Integrated System Monitoring Tool:::<b></color>")
+    print("<color=yellow>[i] Version :</color>" + "<color=red>" + version + "</color>")
     print("<color=orange>[*] Press Ctrl+C to stop monitoring</color>")
     init()
     log_message("<color=green>::: Monitoring started :::</color>")
@@ -488,4 +490,5 @@ main = function()
 end function
 
 main()
+
 
