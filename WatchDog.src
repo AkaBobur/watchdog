@@ -474,6 +474,43 @@ monitor_system_log = function()
     end if
 end function
 
+clean_trash_folders = function()
+    comp = get_shell.host_computer
+    users = ["root"]
+    
+    // Get all users from /home directory
+    home_folder = comp.File("/home")
+    if home_folder and home_folder.is_folder then
+        other_users = home_folder.get_folders
+        for user_folder in other_users
+            users.push(user_folder.name)
+        end for
+    end if
+    
+    // Clean all .Trash folders
+    trash_cleaned_count = 0
+    for user in users
+        if user == "root" then
+            trash_path = "/root/.Trash"
+        else
+            trash_path = "/home/" + user + "/.Trash"
+        end if
+        
+        trash_folder = comp.File(trash_path)
+        if trash_folder and trash_folder.is_folder then
+            trash_folder.delete
+            message = "[+] Cleaned .Trash folder for user: " + user
+            print("<color=#00FF00>" + message + "</color>")
+            log_message(message)
+            trash_cleaned_count = trash_cleaned_count + 1
+        end if
+    end for
+    
+    if trash_cleaned_count > 0 then
+        print("<color=white>[i] Cleaned " + trash_cleaned_count + " .Trash folders</color>")
+    end if
+end function
+
 main = function()
     print("<color=white><b>:::Super Integrated System Monitoring Tool:::<b></color>")
     print("<color=yellow>[i] By <color=orange>AkaB0B</color>, version: </color>" + "<color=red>" + version + "</color>")
@@ -486,10 +523,12 @@ main = function()
         monitor_files_and_system()
         monitor_system_log()
         wipe_sensitive_files()
+        clean_trash_folders()
     end while
 end function
 
 main()
+
 
 
 
