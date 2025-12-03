@@ -10,6 +10,10 @@ Custom Watch process+auto kill
 Monitor logging
 Note: give credit if you want to use
 
+<img width="472" height="305" alt="{35AAC075-5124-479B-AD69-335DB11E30F4}" src="https://github.com/user-attachments/assets/70cb82ad-b53e-434e-9855-047a95b98084" />
+<img width="411" height="680" alt="{04454638-8A9E-45FA-B8FA-55BA968C36D8}" src="https://github.com/user-attachments/assets/45afa5bc-48a7-4ee2-8ad9-21ab3203df2f" />
+
+
 <img width="474" height="439" alt="{07BB1936-F1E6-4B08-B42D-DF34B0828F99}" src="https://github.com/user-attachments/assets/16122e80-010d-432c-97e3-ce958dcb33a4" />
 
 added: Autoclean .Trash folders
