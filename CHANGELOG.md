@@ -56,6 +56,6 @@ New Files:
 /root/watchdog_config/watchdog.conf (main configuration)
 
 Modified Files:
-/root/watchdog_config/file_sizes.cfg (still used for file indexing)
+/root/watchdog_config/total_sizes.cfg (still used for file indexing)
 
 /root/watchdog_config/monitor.log (enhanced logging)
